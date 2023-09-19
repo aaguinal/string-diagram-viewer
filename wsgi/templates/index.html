@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <title>String Diagram Viewer</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+  <link rel="icon" type="image/png" href="{{ url_for('static', path='cams_logo_yellow.png') }}">
+  <link href="{{ url_for('static', path='style.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+  <!-- For loading external data files -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.17.0/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-vue/2.21.1/bootstrap-vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+</head>
+
+<body>
+  <div id="app">
+    <div class="container-fluid">
+      <b-row class="row">
+        <b-col class="col-12">
+          <h1>String Diagram Viewer</h1>
+        </b-col>
+      </b-row>
+
+      <b-row class="text-center" align-v="center" style="margin-bottom:10px;">
+        <b-col class="col-1 offset-1">
+          <!--                    <button type="button" class="btn btn-info">[[ message ]]</button>-->
+          <div class="mt-2">Choose from</div>
+          <b-dropdown variant="primary" text="Examples" class="mx-sm-0">
+            <b-dropdown-item v-for="(item, index) in examples" @click="setExample(item)"> [[ item.name
+              ]]</b-dropdown-item>
+          </b-dropdown>
+        </b-col>
+        <b-col class="col-2">
+          <div class="mt-2">Navigate (Level [[level + 1]] / [[ maxlevel + 1]]) </div>
+          <b-button variant="primary" @click="decrementLevel()"><i class="fas fa-caret-up"></i></b-button>
+          <b-button variant="primary" @click="incrementLevel()"><i class="fas fa-caret-down"></i></b-button>
+        </b-col>
+        <b-col class="col-2">
+          <div class="mt-2">Color Nodes</div>
+          <b-form-checkbox v-model="color" size="lg"></b-form-checkbox>
+        </b-col>
+        <b-col class="col-2">
+          <div class="mt-2">Show Labels</div>
+          <b-form-checkbox v-model="labels" switch size="lg"></b-form-checkbox>
+        </b-col>
+        <b-col class="col-2">
+          <div class="mt-2">Rescale</div>
+          <b-form-input id="scale-range" v-model="scale" type="range" min="100" max="900" step="100"></b-form-input>
+        </b-col>
+        <b-col class="col-1">
+          <div class="mt-1">Save PNG</div>
+          <b-button variant="secondary" @click="savePNG()"><i class="fas fa-save"></i></b-button>
+        </b-col>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-1" @dragover="dragover" @dragleave="dragleave" @drop="drop">
+        <div id="cy" ref="cy" style="border-style:solid;border-width:2px;width:100%;height:750px"></div>
+      </div>
+    </div>
+
+    <div class="row" v-if="!loading">
+      <div class="col-12 offset-1">
+        <i>[[ selected_name ]]</i>
+        <br>
+        Percent of system affected: [[ percent_effected ]]%
+        <br>
+        Number of processes affected: [[ number_effected ]]
+        <br>
+        Total processes: [[ total_morphisms ]]
+      </div>
+    </div>
+
+    <div class="row" v-if="loading">
+      <div class="col-10 offset-1">
+        <div style="padding: 25px 25px 25px 25px">
+          <div class="spinner-border text-info"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  <script src="{{ url_for('static', path='index.js') }}"></script>
+</body>
+
+</html>

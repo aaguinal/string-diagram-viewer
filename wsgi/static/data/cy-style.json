@@ -1,0 +1,36 @@
+[{
+  "selector": "node",
+  "style": {
+    "text-valign": "center",
+    "text-halign": "left",
+    "shape": "data(shape)",
+    "background-opacity": "data(opacity)",
+    "background-color": "data(color)",
+    "border-style": "solid",
+    "border-color": "black",
+    "border-opacity": "data(opacity)",
+    "border-width": 2,
+    "height": "data(height)",
+    "width": "data(width)"
+  }
+},{
+  "selector": "node[label]",
+  "style": {
+    "label": "data(label)",
+    "min-zoomed-font-size": 8,
+    "text-valign": "center",
+    "text-halign": "center"
+  }
+},{
+  "selector": "edge",
+  "style": {
+    "curve-style": "straight",
+    "control-point-step-size": 50,
+    "control-point-weight": 0.5,
+    "line-cap": "round",
+    "width": 2,
+    "line-color": "black",
+    "target-endpoint": "data(target_position)",
+    "source-endpoint": "data(source_position)"
+  }
+}]

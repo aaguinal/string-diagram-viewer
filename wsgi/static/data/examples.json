@@ -1,0 +1,92 @@
+{
+  "default": {
+    "file": "demo.json",
+    "name": "Abstract - Default",
+    "description": "Default example on startup"
+  },
+  "2": {
+    "file": "partial_compositions.json",
+    "name": "Abstract - with partial composition",
+    "description": "Abstract modeling showing scenarios where partial composition is required"
+  },
+  "3": {
+    "file": "sliding_boxes.json",
+    "name": "Abstract - sliding boxes",
+    "description": "Abstract model where sliding boxes past each other would be useful"
+  },
+  "4": {
+    "file": "braids.json",
+    "name": "Abstract - with braids",
+    "description": "Abstract modeling showing strings crossing"
+  },
+  "5": {
+    "file": "empty_domain.json",
+    "name": "Abstract - with empty domain",
+    "description": "Abstract modeling where one morphism contains empty domain"
+  },
+  "6": {
+    "file": "program2image.json",
+    "name": "Abstract - program2image",
+    "description": "Abstract model where image counterpart has been generated"
+  },
+  "7": {
+    "file": "function_trace.json",
+    "name": "Auto - multiply and square",
+    "description": "Diagram automatically generated from parsing trace stack of Python script that multiplies two numbers and squares its output"
+  },
+  "8": {
+    "file": "hadr_process.json",
+    "name": "HADR - Flood Processing",
+    "description": "Handmade model for showing flood processing as a composition of pre-predict, predict, post-predict"
+  },
+  "9": {
+    "file": "hadr_submit_job.json",
+    "name": "HADR - Submit Job",
+    "description": "Handmade model for showing how data passes after submitting a job"
+  },
+  "10": {
+    "file": "hadr_road_obstruction.json",
+    "name": "HADR - Road Obstruction Processing",
+    "description": "Handmade model for showing road obstruction modeling"
+  },
+  "18": {
+    "file": "stack-overflow-unwind.json",
+    "name": "P-CODE - stack-overflow-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "25": {
+    "file": "stack-overflow-small-unwind.json",
+    "name": "P-CODE - stack-overflow-small-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "19": {
+    "file": "good-unwind.json",
+    "name": "P-CODE - good-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "20": {
+    "file": "good-long-unwind.json",
+    "name": "P-CODE - good-long-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "24": {
+    "file": "good-small-unwind.json",
+    "name": "P-CODE - good-small-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "22": {
+    "file": "simple-assign.json",
+    "name": "P-CODE - simple-assign",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "23": {
+    "file": "simple-multiply.json",
+    "name": "P-CODE - simple-multiply",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "26": {
+    "file": "cobalt.json",
+    "name": "COBALT - Create Entity Graph from LexisNexis",
+    "description": "Model showing entity graph and enrichment documents are created in Cobalt for LexisNexis source"
+  }
+}

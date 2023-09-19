@@ -1,0 +1,170 @@
+{
+    "CreateCobaltEntityGraph": {
+      "name": "CreateCobaltEntityGraph",
+      "input": ["doc", "'lexisnexis'"],
+      "output": ["enriched_doc", "graph"],
+      "compose": ["IngestLexisNexis", "CreateGraph"],
+      "level": 0
+    },
+    "IngestLexisNexis": {
+      "name": "IngestLexisNexis",
+      "input": ["doc", "'lexisnexis'"],
+      "output": ["enriched_doc", "enriched_doc_ids", "entity_ids"],
+      "compose": ["CobaltDocument", "GetDocID", "GetEntitiesID"],
+      "level": 1
+    },
+    "CobaltDocument": {
+      "name": "CobaltDocument",
+      "input": ["doc"],
+      "output": ["enriched_doc"],
+      "compose": ["CreateBestGuessTimestamp", "MakeEnrichDoc", "SetDBAttr", "RunCobaltLang"],
+      "level": 2
+    },
+    "GetDocID": {
+      "name": "GetDocID",
+      "input": ["enriched_doc"],
+      "output": ["enriched_doc", "enriched_doc_ids"],
+      "compose": [],
+      "level": 2
+    },
+    "GetEntitiesID": {
+      "name": "GetEntitiesID",
+      "input": ["enriched_doc"],
+      "output": ["enriched_doc", "entity_ids"],
+      "compose": [],
+      "level": 2
+    },
+    "CreateGraph": {
+      "name": "CreateGraph",
+      "input": ["enriched_doc_ids", "entity_ids"],
+      "output": ["graph"],
+      "compose": ["BulkQueryDocs", "BulkQueryEntities", "CreateVertexTable", "CreateEdgeTable", "BuildCytoGraph"],
+      "level": 1
+    },
+    "BulkQueryDocs": {
+        "name": "BulkQueryDocs",
+        "input": ["enrich_doc_ids"],
+        "output": ["entities"],
+        "compose" : [],
+        "level": 2
+    },
+    "BulkQueryEntities" : {
+        "name": "BulkQueryEntities",
+        "input": ["entity_ids"],
+        "output": ["enriched_docs"],
+        "compose" : [],
+        "level": 2
+    },
+    "CreateEdgeTable" : {
+        "name": "CreateEdgeTable",
+        "input": ["enriched_docs"],
+        "output": ["edges"],
+        "compose" : [],
+        "level": 2
+    },
+    "CreateVertexTable": {
+        "name": "CreateVertexTable",
+        "input": ["entities"],
+        "output": ["vertices"],
+        "compose" : [],
+        "level": 2
+    },
+    "BuildCytoGraph" : {
+        "name": "BuildCytoGraph",
+        "input": ["edges", "vertices"],
+        "output": ["graph"],
+        "compose": [],
+        "level": 2
+    },
+    "CreateBestGuessTimestamp" : {
+      "name": "CreateBestGuessTimestamp",
+      "input": ["doc"],
+      "output": ["doc", "best_guess_timestamp"],
+      "compose": [],
+      "level": 3
+    },
+    "MakeEnrichDoc" : {
+      "name": "MakeEnrichDoc",
+      "input": ["doc", "best_guess_timestamp"],
+      "output": ["doc", "to_update"],
+      "compose": [],
+      "level": 3
+    },
+    "SetDBAttr": {
+      "name": "SetDBAttr",
+      "input": ["doc", "to_update"],
+      "output": ["enriched_doc"],
+      "compose": [],
+      "level": 3
+    },
+    "RunCobaltLang" : {
+      "name": "RunCobaltLang",
+      "input": ["enriched_doc"],
+      "output": ["enriched_doc"],
+      "compose": ["GetSummary", "DetectLang", "SetDBAttrLang", "RemoveURLs", "RunSpacey", "ProcessNerResults", "SetDBAttrSpacey"],
+      "level": 3
+    },
+    "GetSummary": {
+      "name": "GetSummary",
+      "input": ["enriched_doc"],
+      "output": ["enriched_doc", "summary"],
+      "compose": [],
+      "level": 4
+    },
+    "DetectLang": {
+      "name": "DetectLang",
+      "input": ["summary"],
+      "output": ["summary", "language"],
+      "compose": [],
+      "level": 4
+    },
+    "SetDBAttrLang": {
+      "name": "SetDBAttr",
+      "input": ["enriched_doc", "language"],
+      "output": ["enriched_doc"],
+      "compose": [],
+      "level": 4
+    },
+    "RemoveURLs": {
+      "name": "RemoveURLs",
+      "input": ["enriched_doc", "summary"],
+      "output": ["no_urls"],
+      "compose": [],
+      "level": 4
+    },
+    "RunSpacey": {
+      "name": "Spacey",
+      "input": ["no_urls"],
+      "output": ["spacey_results"],
+      "compose": [],
+      "level": 4
+    },
+    "ProcessNerResults": {
+      "name": "ProcessNerResults",
+      "input": ["enriched_doc", "spacey_results"],
+      "output": ["enriched_doc", "spacey_results"],
+      "compose": ["GetSpaceyEntities", "AddCobaltEntities"],
+      "level": 4
+    },
+    "SetDBAttrSpacey": {
+      "name": "SetDBAttrs",
+      "input": ["enriched_doc", "spacey_results"],
+      "output": ["enriched_doc"],
+      "compose": [],
+      "level": 4
+    },
+    "GetSpaceyEntities": {
+      "name": "GetSpaceyEntities",
+      "input": ["enriched_doc", "spacey_results"],
+      "output": ["enriched_doc", "spacey_results", "entities"],
+      "compose": [],
+      "level": 5
+    },
+    "AddCobaltEntities": {
+      "name": "AddCobaltEntities",
+      "input": ["enriched_doc", "entities"],
+      "output": ["enriched_doc"],
+      "compose": [],
+      "level": 5
+    }
+}

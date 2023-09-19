@@ -1,0 +1,16 @@
+{
+  "root": {
+    "name": "func",
+    "input": ["funcA_in", "funcB_in"],
+    "outpus": ["funcC_out"],
+    "compose": ["funcname"],
+    "level": 0
+  },
+  "funcname": {
+    "name": "funcname",
+    "input": ["a", "b"],
+    "output": ["c"],
+    "compose": ["funcA", "funcB", "funcC"],
+    "level": 1
+  }
+}

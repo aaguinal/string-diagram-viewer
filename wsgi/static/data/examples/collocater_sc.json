@@ -1,0 +1,100 @@
+{
+  "main -- EVENT_TOPIC": {
+    "name": "main, elif msg.topic == EVENT_TOPIC",
+    "input": ["engine", "data", "search_radius", "association_dist"],
+    "output": ["engine", "data", "search_radius", "association_dist", "vehicles_of_interest", "people_of_interest"],
+    "compose": ["voi", "poi"],
+    "level": 0
+  },
+  "voi": {
+    "name": "get_vehicles_of_interest",
+    "input": ["engine", "data", "search_radius"],
+    "output": ["engine", "data", "search_radius", "vehicles_of_interest"],
+    "compose": ["data['dtg']", "str(Point())", "query_voi", "frompostgis_voi"],
+    "level": 1
+  },
+  "poi": {
+    "name": "get_people_of_interest",
+    "input": ["engine", "data", "vehzicles_of_interest", "association_dist"],
+    "output": ["engine", "data", "vehicles_of_interest", "association_dist", "people_of_interest"],
+    "compose": ["data['dtg']", "str(Point())", "people=[]", "voi_iterrows", "query_poi", "frompostgis_poi", "gdf_iterrows", "people_append", "geodataframe"],
+    "level": 1
+  },
+  "data['dtg']": {
+    "name": ".index('dtg')",
+    "input": ["data"],
+    "output": ["data", "timestamp"],
+    "compose": [],
+    "level": 2
+  },
+  "str(Point())": {
+    "name": "str(Point(data['GeoEstimate']['LON_DEG'], data['GeoEstimate']['LAT_DEG'])",
+    "input": ["data"],
+    "output": ["data", "geometry"],
+    "compose": [],
+    "level": 2
+  },
+  "query_voi": {
+    "name": "SELECT * FROM stops WHERE ...",
+    "input": ["timestamp", "geometry"],
+    "output": ["timestamp", "geometry", "query"],
+    "compose": [],
+    "level": 2
+  },
+  "frompostgis_voi": {
+    "name": "GeoDataFrame.from_postgis(query, engine, geom_col='geometry')",
+    "input": ["query", "engine"],
+    "output": ["query", "engine", "vehicles_of_interest"],
+    "compose": [],
+    "level": 2
+  },
+  "people=[]": {
+    "name": "people=[]",
+    "input": ["[]"],
+    "output": ["people"],
+    "compose": [],
+    "level": 2
+  },
+  "voi_iterrows": {
+    "name": ".iterrows()",
+    "input": ["vehicles_of_interest"],
+    "output": ["row"],
+    "compose": [],
+    "level": 2
+  },
+  "query_poi": {
+    "name": "SELECT * FROM trajectories WHERE ...",
+    "input": ["row", "timestamp", "geometry"],
+    "output": ["row", "timestamp", "geometry", "query"],
+    "compose": [],
+    "level": 2
+  },
+  "frompostgis_poi": {
+    "name": "GeoDataFrame.from_postgis(query, engine, geom_col='geometry')",
+    "input": ["query", "engine"],
+    "output": ["query", "engine", "gdf"],
+    "compose": [],
+    "level": 2
+  },
+  "gdf_iterrows": {
+    "name": ".iterrows()",
+    "input": ["gdf"],
+    "output": ["row"],
+    "compose": [],
+    "level": 2
+  },
+  "people_append": {
+    "name": ".append()",
+    "input": ["people", "row"],
+    "output": ["people", "row"],
+    "compose": [],
+    "level": 2
+  },
+  "geodataframe": {
+    "name": "GeoDataFrame(...)",
+    "input": ["people", "['traj_id', 'reid', 'object_id']"],
+    "output": ["people", "people_of_interest"],
+    "compose": [],
+    "level": 2
+  }
+}

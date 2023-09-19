@@ -1,0 +1,30 @@
+{
+  "process": {
+    "name": "process",
+    "input": ["job", "process_id", "model_input_dim", "flood_model"],
+    "output": ["results", "status"],
+    "compose": ["func1", "func2", "func3"],
+    "level": 0
+  },
+  "func1": {
+    "name": "pre_predict",
+    "input": ["job", "process_id", "model_input_dim"],
+    "output": ["batch", "job"],
+    "compose": [],
+    "level": 1
+  },
+  "func2": {
+    "name": "predict",
+    "input": ["batch", "flood_model"],
+    "output": ["results"],
+    "compose": [],
+    "level": 1
+  },
+  "func3": {
+    "name": "post_predict",
+    "input": ["results", "job"],
+    "output": ["results", "status"],
+    "compose": [],
+    "level": 1
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "FaceRecognition": {
+    "name": "FaceRecognition",
+    "input": ["seed_image", "face_recognition_database"],
+    "output": ["[]"],
+    "compose": ["FaceGenerator", "FaceDetection", "FaceExtraction", "FaceFeatureExtraction", "CreateFaceprint", "MatchFaceprint", "UseFaceID"],
+    "level": 0
+  },
+  "FaceGenerator": {
+    "name": "FaceGenerator",
+    "input": ["seed_image"],
+    "output": ["image"],
+    "compose": [],
+    "level": 1
+  },
+  "FaceDetection": {
+    "name": "FaceDetection",
+    "input": ["image"],
+    "output": ["image", "face_bounding_box"],
+    "compose": [],
+    "level": 1
+  },
+  "FaceExtraction": {
+    "name": "FaceExtraction",
+    "input": ["image", "face_bounding_box"],
+    "output": ["image_of_face"],
+    "compose": [],
+    "level": 1
+  },
+  "FaceFeatureExtraction": {
+    "name": "FaceAnalysis",
+    "input": ["image_of_face"],
+    "output": ["distance_between_eyes", "depth_of_eye_sockets", "distance_from_forehead_to_chin", "shape_of_cheekbones", "contour_of_lips", "contour_of_ears", "contour_of_chin"],
+    "compose": [],
+    "level": 1
+  },
+  "CreateFaceprint": {
+    "name": "CreateFaceprint",
+    "input": ["distance_between_eyes", "depth_of_eye_sockets", "distance_from_forehead_to_chin", "shape_of_cheekbones", "contour_of_lips", "contour_of_ears", "contour_of_chin"],
+    "output": ["faceprint"],
+    "compose": [],
+    "level": 1
+  },
+  "MatchFaceprint": {
+    "name": "MatchFaceprint",
+    "input": ["faceprint", "face_recognition_database"],
+    "output": ["face_id"],
+    "compose": [],
+    "level": 1
+  },
+  "UseFaceID": {
+    "name": "UseFaceID",
+    "input": ["face_id"],
+    "output": ["[]"],
+    "compose": [],
+    "level": 1
+  }
+}

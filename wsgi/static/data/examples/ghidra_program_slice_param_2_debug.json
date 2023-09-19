@@ -1,0 +1,171 @@
+{
+  "11": {
+    "level": 1,
+    "output": [
+      "m"
+    ],
+    "input": [
+      "b",
+      "c"
+    ],
+    "compose": [],
+    "name": "INT_ADD"
+  },
+  "0": {
+    "level": 1,
+    "output": [
+      "a"
+    ],
+    "input": [
+      "b",
+      "c"
+    ],
+    "compose": [],
+    "name": "INT_ADD"
+  },
+  "1": {
+    "level": 1,
+    "output": [
+      "d"
+    ],
+    "input": [
+      "e",
+      "f"
+    ],
+    "compose": [],
+    "name": "LOAD"
+  },
+  "2": {
+    "level": 1,
+    "output": [
+      "f"
+    ],
+    "input": [
+      "a"
+    ],
+    "compose": [],
+    "name": "CAST"
+  },
+  "3": {
+    "level": 1,
+    "output": [
+      "d"
+    ],
+    "input": [
+      "e",
+      "f"
+    ],
+    "compose": [],
+    "name": "LOAD"
+  },
+  "param_2": {
+    "level": 0,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "[]"
+    ],
+    "compose": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "name": "param_2"
+  },
+  "4": {
+    "level": 1,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "g",
+      "h",
+      "d"
+    ],
+    "compose": [],
+    "name": "CALL"
+  },
+  "5": {
+    "level": 1,
+    "output": [
+      "i"
+    ],
+    "input": [
+      "j",
+      "d",
+      "o",
+      "f"
+    ],
+    "compose": [],
+    "name": "CALL"
+  },
+  "6": {
+    "level": 1,
+    "output": [
+      "d"
+    ],
+    "input": [
+      "e",
+      "f"
+    ],
+    "compose": [],
+    "name": "LOAD"
+  },
+  "7": {
+    "level": 1,
+    "output": [
+      "f"
+    ],
+    "input": [
+      "l"
+    ],
+    "compose": [],
+    "name": "CAST"
+  },
+  "8": {
+    "level": 1,
+    "output": [
+      "f"
+    ],
+    "input": [
+      "m"
+    ],
+    "compose": [],
+    "name": "CAST"
+  },
+  "9": {
+    "level": 1,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "g",
+      "n",
+      "d"
+    ],
+    "compose": [],
+    "name": "CALL"
+  },
+  "10": {
+    "level": 1,
+    "output": [
+      "l"
+    ],
+    "input": [
+      "b",
+      "c"
+    ],
+    "compose": [],
+    "name": "INT_ADD"
+  }
+}

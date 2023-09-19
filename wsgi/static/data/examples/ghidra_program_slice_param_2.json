@@ -1,0 +1,171 @@
+{
+  "11": {
+    "level": 1,
+    "output": [
+      "(unique, 0x100000a9, 8)"
+    ],
+    "input": [
+      "(register, 0x30, 8)",
+      "(const, 0x8, 8)"
+    ],
+    "compose": [],
+    "name": "INT_ADD"
+  },
+  "0": {
+    "level": 1,
+    "output": [
+      "(unique, 0x100000a1, 8)"
+    ],
+    "input": [
+      "(register, 0x30, 8)",
+      "(const, 0x8, 8)"
+    ],
+    "compose": [],
+    "name": "INT_ADD"
+  },
+  "1": {
+    "level": 1,
+    "output": [
+      "(unique, 0x17b0, 8)"
+    ],
+    "input": [
+      "(const, 0x1b1, 4)",
+      "(register, 0x0, 8)"
+    ],
+    "compose": [],
+    "name": "LOAD"
+  },
+  "2": {
+    "level": 1,
+    "output": [
+      "(register, 0x0, 8)"
+    ],
+    "input": [
+      "(unique, 0x100000a1, 8)"
+    ],
+    "compose": [],
+    "name": "CAST"
+  },
+  "3": {
+    "level": 1,
+    "output": [
+      "(unique, 0x17b0, 8)"
+    ],
+    "input": [
+      "(const, 0x1b1, 4)",
+      "(register, 0x0, 8)"
+    ],
+    "compose": [],
+    "name": "LOAD"
+  },
+  "param_2": {
+    "level": 0,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "[]"
+    ],
+    "compose": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "name": "param_2"
+  },
+  "4": {
+    "level": 1,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "(ram, 0x1005f0, 8)",
+      "(unique, 0x10000089, 8)",
+      "(unique, 0x17b0, 8)"
+    ],
+    "compose": [],
+    "name": "CALL"
+  },
+  "5": {
+    "level": 1,
+    "output": [
+      "(register, 0x0, 4)"
+    ],
+    "input": [
+      "(ram, 0x1005c0, 8)",
+      "(unique, 0x17b0, 8)",
+      "(unique, 0x10000081, 8)",
+      "(register, 0x0, 8)"
+    ],
+    "compose": [],
+    "name": "CALL"
+  },
+  "6": {
+    "level": 1,
+    "output": [
+      "(unique, 0x17b0, 8)"
+    ],
+    "input": [
+      "(const, 0x1b1, 4)",
+      "(register, 0x0, 8)"
+    ],
+    "compose": [],
+    "name": "LOAD"
+  },
+  "7": {
+    "level": 1,
+    "output": [
+      "(register, 0x0, 8)"
+    ],
+    "input": [
+      "(unique, 0x10000099, 8)"
+    ],
+    "compose": [],
+    "name": "CAST"
+  },
+  "8": {
+    "level": 1,
+    "output": [
+      "(register, 0x0, 8)"
+    ],
+    "input": [
+      "(unique, 0x100000a9, 8)"
+    ],
+    "compose": [],
+    "name": "CAST"
+  },
+  "9": {
+    "level": 1,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "(ram, 0x1005f0, 8)",
+      "(unique, 0x10000091, 8)",
+      "(unique, 0x17b0, 8)"
+    ],
+    "compose": [],
+    "name": "CALL"
+  },
+  "10": {
+    "level": 1,
+    "output": [
+      "(unique, 0x10000099, 8)"
+    ],
+    "input": [
+      "(register, 0x30, 8)",
+      "(const, 0x8, 8)"
+    ],
+    "compose": [],
+    "name": "INT_ADD"
+  }
+}

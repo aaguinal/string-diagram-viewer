@@ -1,0 +1,127 @@
+{
+  "default": {
+    "file": "demo.json",
+    "name": "Abstract - Default",
+    "description": "Default example on startup"
+  },
+  "2": {
+    "file": "partial_compositions.json",
+    "name": "Abstract - with partial composition",
+    "description": "Abstract modeling showing scenarios where partial composition is required"
+  },
+  "3": {
+    "file": "sliding_boxes.json",
+    "name": "Abstract - sliding boxes",
+    "description": "Abstract model where sliding boxes past each other would be useful"
+  },
+  "4": {
+    "file": "braids.json",
+    "name": "Abstract - with braids",
+    "description": "Abstract modeling showing strings crossing"
+  },
+  "5": {
+    "file": "empty_domain.json",
+    "name": "Abstract - with empty domain",
+    "description": "Abstract modeling where one morphism contains empty domain"
+  },
+  "6": {
+    "file": "program2image.json",
+    "name": "Abstract - program2image",
+    "description": "Abstract model where image counterpart has been generated"
+  },
+  "7": {
+    "file": "function_trace.json",
+    "name": "Auto - multiply and square",
+    "description": "Diagram automatically generated from parsing trace stack of Python script that multiplies two numbers and squares its output"
+  },
+  "8": {
+    "file": "hadr_process.json",
+    "name": "HADR - Flood Processing",
+    "description": "Handmade model for showing flood processing as a composition of pre-predict, predict, post-predict"
+  },
+  "9": {
+    "file": "hadr_submit_job.json",
+    "name": "HADR - Submit Job",
+    "description": "Handmade model for showing how data passes after submitting a job"
+  },
+  "10": {
+    "file": "hadr_road_obstruction.json",
+    "name": "HADR - Road Obstruction Processing",
+    "description": "Handmade model for showing road obstruction modeling"
+  },
+  "11": {
+    "file": "ghidra.json",
+    "name": "Ghidra - Function Cross Referencing",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "12": {
+    "file": "function_trace_2.json",
+    "name": "Auto - three levels",
+    "description": "Diagram automatically generated from parsing trace stack of Python script that multiplies two numbers and squares its output"
+  },
+  "13": {
+    "file": "ghidra_program_slice_param_1.json",
+    "name": "Ghidra - Program Slice - param_1",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "14": {
+    "file": "ghidra_program_slice_param_2.json",
+    "name": "Ghidra - Program Slice - param_2",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "15": {
+    "file": "stack-overflow-loop.json",
+    "name": "stack-overflow-loop",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "16": {
+    "file": "stack-overflow-movsb.json",
+    "name": "stack-overflow-movsb",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "17": {
+    "file": "stack-overflow-memcpy.json",
+    "name": "stack-overflow-memcpy",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "18": {
+    "file": "stack-overflow-unwind.json",
+    "name": "stack-overflow-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "25": {
+    "file": "stack-overflow-small-unwind.json",
+    "name": "stack-overflow-small-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "19": {
+    "file": "good-unwind.json",
+    "name": "good-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "20": {
+    "file": "good-long-unwind.json",
+    "name": "good-long-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "24": {
+    "file": "good-small-unwind.json",
+    "name": "good-small-unwind",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "21": {
+    "file": "c1.json",
+    "name": "hackaday-u c1",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "22": {
+    "file": "simple-assign.json",
+    "name": "simple-assign",
+    "description": "Using function cross-referencing in Ghidra"
+  },
+  "23": {
+    "file": "simple-multiply.json",
+    "name": "simple-multiply",
+    "description": "Using function cross-referencing in Ghidra"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "normalize_by_multiply_square": {
+    "name": "normalize_by_multiply_square",
+    "input": [
+      "a",
+      "b"
+    ],
+    "output": [
+      "c"
+    ],
+    "compose": [
+      "multiply_square"
+    ],
+    "level": 0
+  },
+  "multiply_square": {
+    "name": "multiply_square",
+    "input": [
+      "a",
+      "b"
+    ],
+    "output": [
+      "c"
+    ],
+    "compose": [
+      "multiply",
+      "square"
+    ],
+    "level": 1
+  },
+  "multiply": {
+    "name": "multiply",
+    "input": [
+      "a",
+      "b"
+    ],
+    "output": [
+      "x"
+    ],
+    "compose": [],
+    "level": 2
+  },
+  "square": {
+    "name": "square",
+    "input": [
+      "x"
+    ],
+    "output": [
+      "y"
+    ],
+    "compose": [],
+    "level": 2
+  }
+}

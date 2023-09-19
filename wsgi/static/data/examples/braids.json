@@ -1,0 +1,37 @@
+{
+  "f * g * h * k": {
+    "name": "k ∘ h ∘ g ∘ f",
+    "input": ["a", "b", "e", "o"],
+    "output": ["i"],
+    "compose": ["f", "g", "h", "k"],
+    "level": 0
+  },
+  "f": {
+    "name": "f",
+    "input": ["a", "b"],
+    "output": ["c", "d", "foo"],
+    "compose": [],
+    "level": 1
+  },
+  "g": {
+    "name": "g",
+    "input": ["c", "d", "e"],
+    "output": ["m", "n"],
+    "compose": [],
+    "level": 1
+  },
+  "h": {
+    "name": "h",
+    "input": ["m", "n", "o"],
+    "output": ["bar"],
+    "compose": [],
+    "level": 1
+  },
+  "k": {
+    "name": "k",
+    "input": ["bar", "foo"],
+    "output": ["i"],
+    "compose": [],
+    "level": 1
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "0": {
+    "level": 1,
+    "output": [
+      "(register, 0x0, 8)"
+    ],
+    "input": [
+      "(const, 0x0, 8)"
+    ],
+    "compose": [],
+    "name": "COPY"
+  },
+  "1": {
+    "level": 1,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "(const, 0x0, 8)",
+      "(register, 0x0, 8)"
+    ],
+    "compose": [],
+    "name": "RETURN"
+  },
+  "_copy": {
+    "level": 0,
+    "output": [
+      "[]"
+    ],
+    "input": [
+      "[]"
+    ],
+    "compose": [
+      "0",
+      "1"
+    ],
+    "name": "_copy"
+  }
+}

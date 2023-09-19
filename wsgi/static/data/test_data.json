@@ -1,0 +1,503 @@
+[
+  {
+    "data": {
+      "id": "id_{a}_(0)_(0)",
+      "position": {
+        "y": 0,
+        "x": 0.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "a",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 0,
+      "x": 50.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{b}_(0)_(1)",
+      "position": {
+        "y": 0,
+        "x": 1.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "b",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 0,
+      "x": 150.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{e}_(0)_(2)",
+      "position": {
+        "y": 0,
+        "x": 2.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "e",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 0,
+      "x": 250.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{i}_(0)_(3)",
+      "position": {
+        "y": 0,
+        "x": 3.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "i",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 0,
+      "x": 350.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "f_(1)_(0)",
+      "position": {
+        "y": 1,
+        "x": 1.0
+      },
+      "type": "NamedMorphism",
+      "width": 200.0,
+      "shape": "round-rectangle",
+      "opacity": 1,
+      "label": "f",
+      "height": 50.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 100,
+      "x": 100.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{e}_(1)_(1)",
+      "position": {
+        "y": 1,
+        "x": 2.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "e",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 100,
+      "x": 250.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{i}_(1)_(2)",
+      "position": {
+        "y": 1,
+        "x": 3.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "i",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 100,
+      "x": 350.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{c}_(2)_(0)",
+      "position": {
+        "y": 2,
+        "x": 0.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "c",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 200,
+      "x": 50.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{d}_(2)_(1)",
+      "position": {
+        "y": 2,
+        "x": 1.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "d",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 200,
+      "x": 150.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{e}_(2)_(2)",
+      "position": {
+        "y": 2,
+        "x": 2.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "e",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 200,
+      "x": 250.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{i}_(2)_(3)",
+      "position": {
+        "y": 2,
+        "x": 3.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "i",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 200,
+      "x": 350.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{c}_(3)_(0)",
+      "position": {
+        "y": 3,
+        "x": 0.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "c",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 300,
+      "x": 50.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "g_(3)_(1)",
+      "position": {
+        "y": 3,
+        "x": 2.5
+      },
+      "type": "NamedMorphism",
+      "width": 300.0,
+      "shape": "round-rectangle",
+      "opacity": 1,
+      "label": "g",
+      "height": 50.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 300,
+      "x": 250.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{c}_(4)_(0)",
+      "position": {
+        "y": 4,
+        "x": 0.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "c",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 400,
+      "x": 50.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{j}_(4)_(1)",
+      "position": {
+        "y": 4,
+        "x": 1.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "j",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 400,
+      "x": 150.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "id_{l}_(4)_(2)",
+      "position": {
+        "y": 4,
+        "x": 2.5
+      },
+      "type": "IdentityMorphism",
+      "width": 25.0,
+      "label": "l",
+      "shape": "ellipse",
+      "opacity": 1,
+      "height": 25.0,
+      "color": "white"
+    },
+    "position": {
+      "y": 400,
+      "x": 250.0
+    },
+    "group": "nodes"
+  },
+  {
+    "data": {
+      "id": "[id_{a}_(0)_(0)]*[f_(1)_(0)]_a",
+      "source_position": "0.0 50%",
+      "target_position": "-50.0 -50%",
+      "source": "id_{a}_(0)_(0)",
+      "target": "f_(1)_(0)",
+      "label": "a"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{b}_(0)_(1)]*[f_(1)_(0)]_b",
+      "source_position": "0.0 50%",
+      "target_position": "50.0 -50%",
+      "source": "id_{b}_(0)_(1)",
+      "target": "f_(1)_(0)",
+      "label": "b"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{e}_(0)_(2)]*[id_{e}_(1)_(1)]_e",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "id_{e}_(0)_(2)",
+      "target": "id_{e}_(1)_(1)",
+      "label": "e"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{i}_(0)_(3)]*[id_{i}_(1)_(2)]_i",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "id_{i}_(0)_(3)",
+      "target": "id_{i}_(1)_(2)",
+      "label": "i"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[f_(1)_(0)]*[id_{c}_(2)_(0)]_c",
+      "source_position": "-50.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "f_(1)_(0)",
+      "target": "id_{c}_(2)_(0)",
+      "label": "c"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[f_(1)_(0)]*[id_{d}_(2)_(1)]_d",
+      "source_position": "50.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "f_(1)_(0)",
+      "target": "id_{d}_(2)_(1)",
+      "label": "d"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{e}_(1)_(1)]*[id_{e}_(2)_(2)]_e",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "id_{e}_(1)_(1)",
+      "target": "id_{e}_(2)_(2)",
+      "label": "e"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{i}_(1)_(2)]*[id_{i}_(2)_(3)]_i",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "id_{i}_(1)_(2)",
+      "target": "id_{i}_(2)_(3)",
+      "label": "i"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{c}_(2)_(0)]*[id_{c}_(3)_(0)]_c",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "id_{c}_(2)_(0)",
+      "target": "id_{c}_(3)_(0)",
+      "label": "c"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{d}_(2)_(1)]*[g_(3)_(1)]_d",
+      "source_position": "0.0 50%",
+      "target_position": "-100.0 -50%",
+      "source": "id_{d}_(2)_(1)",
+      "target": "g_(3)_(1)",
+      "label": "d"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{e}_(2)_(2)]*[g_(3)_(1)]_e",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "id_{e}_(2)_(2)",
+      "target": "g_(3)_(1)",
+      "label": "e"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{i}_(2)_(3)]*[g_(3)_(1)]_i",
+      "source_position": "0.0 50%",
+      "target_position": "100.0 -50%",
+      "source": "id_{i}_(2)_(3)",
+      "target": "g_(3)_(1)",
+      "label": "i"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[id_{c}_(3)_(0)]*[id_{c}_(4)_(0)]_c",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "id_{c}_(3)_(0)",
+      "target": "id_{c}_(4)_(0)",
+      "label": "c"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[g_(3)_(1)]*[id_{j}_(4)_(1)]_j",
+      "source_position": "-100.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "g_(3)_(1)",
+      "target": "id_{j}_(4)_(1)",
+      "label": "j"
+    },
+    "group": "edges"
+  },
+  {
+    "data": {
+      "id": "[g_(3)_(1)]*[id_{l}_(4)_(2)]_l",
+      "source_position": "0.0 50%",
+      "target_position": "0.0 -50%",
+      "source": "g_(3)_(1)",
+      "target": "id_{l}_(4)_(2)",
+      "label": "l"
+    },
+    "group": "edges"
+  }
+]

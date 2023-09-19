@@ -1,0 +1,40 @@
+{
+  "multiply_square": {
+    "name": "multiply_square",
+    "input": [
+      "a",
+      "b"
+    ],
+    "output": [
+      "c"
+    ],
+    "compose": [
+      "multiply",
+      "square"
+    ],
+    "level": 0
+  },
+  "multiply": {
+    "name": "multiply",
+    "input": [
+      "a",
+      "b"
+    ],
+    "output": [
+      "x"
+    ],
+    "compose": [],
+    "level": 1
+  },
+  "square": {
+    "name": "square",
+    "input": [
+      "x"
+    ],
+    "output": [
+      "y"
+    ],
+    "compose": [],
+    "level": 1
+  }
+}

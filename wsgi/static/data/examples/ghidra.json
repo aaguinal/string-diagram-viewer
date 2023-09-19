@@ -1,0 +1,44 @@
+{
+  "main": {
+    "name": "main",
+    "input": ["int", "long"],
+    "output": ["long"],
+    "compose": ["strncmp", "puts", "strlen", "printf 0x00100797", "printf 0x001007bd"],
+    "level": 0
+  },
+  "strncmp": {
+    "name": "strncmp 0x00100774",
+    "input": ["char", "char", "size_t"],
+    "output": ["int"],
+    "compose": [],
+    "level": 1
+  },
+  "puts": {
+    "name": "puts 0x00100736",
+    "input": ["char"],
+    "output": ["int"],
+    "compose": [],
+    "level": 1
+  },
+  "strlen": {
+    "name": "strlen 0x00100757",
+    "input": ["char"],
+    "output": ["size_t"],
+    "compose": [],
+    "level": 1
+  },
+  "printf 0x00100797": {
+    "name": "printf 0x00100797",
+    "input": ["char"],
+    "output": ["int"],
+    "compose": [],
+    "level": 1
+  },
+  "printf 0x001007bd": {
+    "name": "printf 0x001007bd",
+    "input": ["char"],
+    "output": ["int"],
+    "compose": [],
+    "level": 1
+  }
+}

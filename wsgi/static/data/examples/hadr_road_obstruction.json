@@ -1,0 +1,157 @@
+{
+  "root": {
+    "name": "RoadObstructionProcessor.process",
+    "input": ["image_metadata", "dilated_road_and_not_water_road_obstruct", "image_metadata", "not_water_mask",
+      "query", "query", "query", "query", "iterations"],
+    "output": ["blocked_road_mask", "image", "road_seg_mask"],
+    "compose": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+    "level": 0
+  },
+  "0": {
+    "name": "get_image",
+    "input": ["query"],
+    "output": ["image", "image_metadata"],
+    "compose": [],
+    "level": 1
+  },
+  "1": {
+    "name": "road_segmentation",
+    "input": ["image", "image_metadata"],
+    "output": ["road_seg_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "2": {
+    "name": "get_image",
+    "input": ["query"],
+    "output": ["image", "image_metadata"],
+    "compose": [],
+    "level": 1
+  },
+  "3": {
+    "name": "flood_segmentation",
+    "input": ["image", "image_metadata"],
+    "output": ["flood_seg_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "4": {
+    "name": "get_image",
+    "input": ["query"],
+    "output": ["image", "image_metadata"],
+    "compose": [],
+    "level": 1
+  },
+  "5": {
+    "name": "road_obstruction_detection",
+    "input": ["image", "image_metadata"],
+    "output": ["road_obstruct_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "6": {
+    "name": "get_image",
+    "input": ["query"],
+    "output": ["image", "image_metadata"],
+    "compose": [],
+    "level": 1
+  },
+  "7": {
+    "name": "get_osm_mask_for_image",
+    "input": ["image_metadata"],
+    "output": ["osm_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "8": {
+    "name": "np.logical_not",
+    "input": ["flood_seg_mask"],
+    "output": ["not_flood_seg_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "9": {
+    "name": "shape",
+    "input": ["road_obstruct_mask"],
+    "output": ["road_obstruct_mask", "road_mask_size"],
+    "compose": [],
+    "level": 1
+  },
+  "10": {
+    "name": "np.resize",
+    "input": ["road_obstruct_mask", "road_mask_size"],
+    "output": ["road_obstruct_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "11": {
+    "name": "np.logical_not",
+    "input": ["road_obstruct_mask"],
+    "output": ["not_road_obstruct_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "12": {
+    "name": "np.logical_and",
+    "input": ["not_flood_seg_mask", "osm_mask"],
+    "output": ["road_and_not_water_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "13": {
+    "name": "np.logical_and",
+    "input": ["road_and_not_water_mask", "not_road_obstruct_mask"],
+    "output": ["road_and_not_water_road_obstruct"],
+    "compose": [],
+    "level": 1
+  },
+  "14": {
+    "name": "ndimage.binary_dilation",
+    "input": ["road_and_not_water_road_obstruct", "iterations"],
+    "output": ["dilated_road_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "15": {
+    "name": "np.logical_and",
+    "input": ["not_water_mask", "dilated_road_mask"],
+    "output": ["dilated_road_and_not_water"],
+    "compose": [],
+    "level": 1
+  },
+  "16": {
+    "name": "get_osm_mask_for_image",
+    "input": ["image_metadata"],
+    "output": ["osm_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "17": {
+    "name": "np.logical_and",
+    "input": ["osm_mask", "dilated_road_and_not_water_road_obstruct"],
+    "output": ["road_mask_new"],
+    "compose": [],
+    "level": 1
+  },
+  "18": {
+    "name": "np.logical_not",
+    "input": ["road_mask_new"],
+    "output": ["not_road_mask_new"],
+    "compose": [],
+    "level": 1
+  },
+  "19": {
+    "name": "get_osm_mask_for_image",
+    "input": ["image_metadata"],
+    "output": ["osm_mask"],
+    "compose": [],
+    "level": 1
+  },
+  "20": {
+    "name": "np.logical_and",
+    "input": ["osm_mask", "not_road_mask_new"],
+    "output": ["blocked_road_mask"],
+    "compose": [],
+    "level": 1
+  }
+}
